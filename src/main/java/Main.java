@@ -5,6 +5,10 @@ import static spark.Spark.*;
 
 public class Main {
     public static void main(String[] args) {
+        get("/helloworld", (req, res) -> {
+            return "Hello World!";
+        });
+
         get("/rectangle", (req, res) -> {
             int x=Integer.parseInt(req.queryParams("x"));
             int y=Integer.parseInt(req.queryParams("y"));
